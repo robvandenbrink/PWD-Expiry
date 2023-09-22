@@ -31,7 +31,7 @@ $subj = "List of recently expired accounts"
 $expiredpeople | export-csv ./ExpiredAccounts.csv
 $body = "List of recently expired accounts.  Please contact each of them within the next 24 hours."
 $to = "helpdesk@yourcompany.com"
-send-mailmessage -smtpserver $mailserver -subject $subj -Body $body -attachments ./Expiredaccounts.csv -from $from -to $testaddr
+send-mailmessage -smtpserver $mailserver -subject $subj -Body $body -attachments ./Expiredaccounts.csv -from $from -to $to
 
 $subj = "List of accounts that will expire soon"
 $pwdpeople | export-csv ./ExpiringAccounts.csv
